@@ -1,0 +1,215 @@
+{
+  "tool": "lighthouse",
+  "lighthouseVersion": "13.6.0",
+  "chrome": "Google Chrome 156.0.8078.47",
+  "url": "http://127.0.0.1:4173/",
+  "lcp_element": "article#post-1 img (assets/posts/my-first-photo.webp)",
+  "target_lcp_ms": 2500,
+  "note": "Full JSON lives in /opt/cursor/artifacts/lighthouse/, not beside this summary. INP is not emitted by Lighthouse 13 lab; TBT is the lab proxy. Repair: WebP, lazy/low priority on non-LCP images, HTTP/1.1 keep-alive.",
+  "runs": [
+    {
+      "file": "mobile-1.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:52:37.227Z",
+      "score": 1,
+      "lcp_ms": 1353.5197,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 903.5197000000001,
+      "lcp_element": "article#post-1 > div.post-figure > button.post-photo > img",
+      "config_ok": true,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "rttMs": 150,
+      "downloadThroughputKbps": 1638.4,
+      "cpuSlowdownMultiplier": 4,
+      "screen": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      }
+    },
+    {
+      "file": "mobile-2.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:52:47.436Z",
+      "score": 1,
+      "lcp_ms": 1277.9212,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 902.9212,
+      "lcp_element": "article#post-1 > div.post-figure > button.post-photo > img",
+      "config_ok": true,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "rttMs": 150,
+      "downloadThroughputKbps": 1638.4,
+      "cpuSlowdownMultiplier": 4,
+      "screen": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      }
+    },
+    {
+      "file": "mobile-3.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:52:57.715Z",
+      "score": 1,
+      "lcp_ms": 1278.8439,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 903.8439000000001,
+      "lcp_element": "article#post-1 > div.post-figure > button.post-photo > img",
+      "config_ok": true,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "rttMs": 150,
+      "downloadThroughputKbps": 1638.4,
+      "cpuSlowdownMultiplier": 4,
+      "screen": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      }
+    },
+    {
+      "file": "desktop-1.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:53:07.953Z",
+      "score": 1,
+      "lcp_ms": 302.49799999999993,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 242.498,
+      "lcp_element": "article#post-1 > div.post-figure > button.post-photo > img",
+      "config_ok": true,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "rttMs": 40,
+      "downloadThroughputKbps": 10240,
+      "cpuSlowdownMultiplier": 1,
+      "screen": {
+        "mobile": false,
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "file": "desktop-2.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:53:18.147Z",
+      "score": 1,
+      "lcp_ms": 302.89880000000005,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 242.8988,
+      "lcp_element": "article#post-1 > div.post-figure > button.post-photo > img",
+      "config_ok": true,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "rttMs": 40,
+      "downloadThroughputKbps": 10240,
+      "cpuSlowdownMultiplier": 1,
+      "screen": {
+        "mobile": false,
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "file": "desktop-3.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:53:28.360Z",
+      "score": 1,
+      "lcp_ms": 302.6695,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 242.66950000000003,
+      "lcp_element": "article#post-1 > div.post-figure > button.post-photo > img",
+      "config_ok": true,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "rttMs": 40,
+      "downloadThroughputKbps": 10240,
+      "cpuSlowdownMultiplier": 1,
+      "screen": {
+        "mobile": false,
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "surfaces": {
+    "mobile": {
+      "lcp_ms": {
+        "values": [
+          1353.5197,
+          1277.9212,
+          1278.8439
+        ],
+        "median": 1278.8439,
+        "worst": 1353.5197
+      },
+      "cls": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "tbt_ms": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "lcp_target_ms": 2500,
+      "lcp_target_met": true,
+      "all_config_ok": true
+    },
+    "desktop": {
+      "lcp_ms": {
+        "values": [
+          302.49799999999993,
+          302.89880000000005,
+          302.6695
+        ],
+        "median": 302.6695,
+        "worst": 302.89880000000005
+      },
+      "cls": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "tbt_ms": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "lcp_target_ms": 2500,
+      "lcp_target_met": true,
+      "all_config_ok": true
+    }
+  }
+}
