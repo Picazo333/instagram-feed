@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Breathe Code photo feed: four posts laid out with HTML and CSS.">
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23eaeaea'/%3E%3C/svg%3E">
+    <title>Breathe Code Photo Feed</title>
+    <link rel="preload" as="image" href="assets/posts/my-first-photo.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="assets/signal/tokens.css">
+    <link rel="stylesheet" href="assets/signal/motion.css">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+      (function () {
+        var query = window.matchMedia("(prefers-reduced-motion: reduce)");
+        function apply() {
+          document.documentElement.setAttribute("data-motion", query.matches ? "reduced" : "full");
+        }
+        apply();
+        if (query.addEventListener) {
+          query.addEventListener("change", apply);
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#feed">Skip to photo feed</a>
+    <header class="site-header">
+      <div class="column">
+        <h1>Breathe Code Photo Feed</h1>
+      </div>
+    </header>
+    <noscript>
+      <p class="noscript column">Photo enlargement needs JavaScript. The feed below stays readable.</p>
+    </noscript>
+    <main id="feed" class="feed">
+      <article class="post" id="post-1">
+        <header class="post-header">
+          <h2 class="post-title">My first photo</h2>
+          <time class="post-date" datetime="--12-14">12/14</time>
+        </header>
+        <div class="post-figure" data-state="idle">
+          <button type="button" class="post-photo" aria-haspopup="dialog">
+            <img
+              src="assets/posts/my-first-photo.jpg"
+              width="596"
+              height="399"
+              fetchpriority="high"
+              alt="Close-up of a gray and white puppy standing on grass.">
+          </button>
+          <div class="post-fallback">
+            <p class="post-status" role="status"></p>
+            <button type="button" class="retry">Retry photo</button>
+          </div>
+        </div>
+        <p class="post-body">This is my first photo of the feed. this is a multi line comment for testing purposes. I am learning to code with #BreatheCode</p>
+      </article>
+      <article class="post" id="post-2">
+        <header class="post-header">
+          <h2 class="post-title">Some cute thing</h2>
+          <time class="post-date" datetime="--12-17">12/17</time>
+        </header>
+        <div class="post-figure" data-state="idle">
+          <button type="button" class="post-photo" aria-haspopup="dialog">
+            <img
+              src="assets/posts/some-cute-thing.jpg"
+              width="598"
+              height="599"
+              alt="A pug lying on a pink skateboard in front of tall green hedges.">
+          </button>
+          <div class="post-fallback">
+            <p class="post-status" role="status"></p>
+            <button type="button" class="retry">Retry photo</button>
+          </div>
+        </div>
+        <p class="post-body">The internet approves this cute dog...#BreatheCode</p>
+      </article>
+      <article class="post" id="post-3">
+        <header class="post-header">
+          <h2 class="post-title">There's a paparazzi around</h2>
+          <time class="post-date" datetime="--12-17">12/17</time>
+        </header>
+        <div class="post-figure" data-state="idle">
+          <button type="button" class="post-photo" aria-haspopup="dialog">
+            <img
+              src="assets/posts/paparazzi.jpg"
+              width="598"
+              height="361"
+              alt="Person seen from behind typing on a laptop with a blank white screen.">
+          </button>
+          <div class="post-fallback">
+            <p class="post-status" role="status"></p>
+            <button type="button" class="retry">Retry photo</button>
+          </div>
+        </div>
+        <p class="post-body">This is me waiting for the screen to show my awesome first website made at #BreatheCode</p>
+      </article>
+      <article class="post" id="post-4">
+        <header class="post-header">
+          <h2 class="post-title">And of course... food!</h2>
+          <time class="post-date" datetime="--12-17">12/17</time>
+        </header>
+        <div class="post-figure" data-state="idle">
+          <button type="button" class="post-photo" aria-haspopup="dialog">
+            <img
+              src="assets/posts/food.jpg"
+              width="598"
+              height="510"
+              alt="Bowl of noodles with green onion, carrot, and a fork.">
+          </button>
+          <div class="post-fallback">
+            <p class="post-status" role="status"></p>
+            <button type="button" class="retry">Retry photo</button>
+          </div>
+        </div>
+        <p class="post-body">Because no photo feed is cool without some food on it! #BreatheCode</p>
+      </article>
+    </main>
+    <footer class="site-footer">
+      <p class="footer-note">Academic visual credit for this exercise. It does not state an official partnership or endorsement.</p>
+      <img
+        class="lockup lockup-horizontal"
+        src="assets/brand/signal-horizontal.svg"
+        width="1000"
+        height="160"
+        alt="4Geeks por Divinivid">
+      <img
+        class="lockup lockup-stacked"
+        src="assets/brand/signal-stacked.svg"
+        width="600"
+        height="300"
+        alt="4Geeks por Divinivid">
+    </footer>
+    <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
+      <div class="viewer-panel">
+        <h2 class="viewer-title" id="viewer-title">Photo</h2>
+        <img class="viewer-image" id="viewer-image" src="assets/posts/my-first-photo.jpg" width="596" height="399" alt="Close-up of a gray and white puppy standing on grass.">
+        <p class="viewer-caption" id="viewer-caption"></p>
+        <button type="button" class="viewer-close" id="viewer-close">Close</button>
+      </div>
+    </dialog>
+    <script src="script.js"></script>
+  </body>
+</html>

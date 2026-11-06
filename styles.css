@@ -1,0 +1,336 @@
+/*
+  tokens.css and motion.css load from index.html, in that order, before this file.
+  The exercise gif fixes the feed colors and type sizes.
+  SIGNAL tokens stay in use for focus, status, buttons, and the footer.
+  Element defaults from tokens.css that would resize the feed heading are overridden below.
+*/
+
+body {
+  background: #eaeaea;
+  color: var(--color-ink);
+}
+
+h1,
+h2 {
+  overflow-wrap: normal;
+  letter-spacing: normal;
+}
+
+.column,
+.feed {
+  width: min(37.25rem, calc(100% - (2 * var(--gutter))));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+  background: var(--color-surface);
+  color: var(--color-ink);
+  z-index: var(--z-toast);
+}
+
+.skip-link:focus {
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  top: var(--space-2);
+  left: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  min-height: 2.75rem;
+}
+
+.site-header {
+  background: var(--color-surface);
+}
+
+.site-header h1 {
+  margin: 0;
+  padding-block: 1.35rem 1.55rem;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: left;
+}
+
+.noscript {
+  margin: var(--space-4) auto;
+  color: var(--color-ink);
+}
+
+.feed {
+  padding-bottom: var(--space-4);
+}
+
+.post {
+  background: var(--color-surface);
+  margin-block: 3.75rem;
+}
+
+.post-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: 0.95rem 0.9rem 0.7rem;
+}
+
+.post-title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.post-date {
+  flex: 0 0 auto;
+  color: var(--color-muted);
+  font-size: 0.875rem;
+  line-height: 1.25;
+}
+
+.post-figure {
+  position: relative;
+  margin: 0;
+}
+
+.post-photo {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.post-photo img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.post-body {
+  margin: 0;
+  padding: 0.95rem 1.05rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.post-fallback {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  text-align: center;
+  background: var(--color-canvas);
+  color: var(--color-ink);
+}
+
+.post-status {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+.post-figure[data-state="loading"] .post-fallback {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.post-figure[data-state="loading"] .retry {
+  display: none;
+}
+
+.post-figure[data-state="error"] .post-photo {
+  display: none;
+}
+
+.post-figure[data-state="error"] .post-fallback {
+  display: flex;
+  min-height: 12rem;
+  border: 1px solid var(--color-border);
+}
+
+.post-figure[data-state="error"] .post-status {
+  color: var(--color-danger);
+}
+
+.retry,
+.viewer-close,
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: var(--space-2) var(--space-4);
+  border: 0;
+  border-radius: var(--radius-control);
+  background: var(--color-action);
+  color: var(--color-on-action);
+  font: inherit;
+  font-size: 1rem;
+  line-height: 1.25;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.retry:hover,
+.viewer-close:hover,
+.back-link:hover {
+  background: var(--color-action-hover);
+}
+
+.retry:active,
+.viewer-close:active,
+.back-link:active {
+  background: var(--color-action-pressed);
+}
+
+.retry:disabled {
+  background: var(--color-subtle);
+  color: var(--color-ink);
+  cursor: not-allowed;
+}
+
+.site-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-8) var(--gutter) var(--space-12);
+}
+
+.footer-note {
+  margin: 0;
+  max-width: var(--measure);
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.333;
+  text-align: center;
+}
+
+.lockup {
+  display: block;
+  height: auto;
+}
+
+.lockup-horizontal {
+  width: 400px;
+  max-width: 100%;
+  aspect-ratio: 1000 / 160;
+}
+
+.lockup-stacked {
+  display: none;
+  width: 280px;
+  max-width: 100%;
+  aspect-ratio: 600 / 300;
+}
+
+.viewer {
+  width: min(40rem, calc(100% - 2rem));
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+.viewer::backdrop {
+  background: var(--color-overlay);
+}
+
+.viewer-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-overlay);
+}
+
+.viewer-title {
+  margin: 0;
+  font-size: 1.25rem;
+  line-height: 1.3;
+}
+
+.viewer-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+  background: var(--color-subtle);
+}
+
+.viewer-caption {
+  margin: 0;
+}
+
+.viewer-close {
+  align-self: flex-start;
+}
+
+.missing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-8) var(--gutter);
+}
+
+.missing h1 {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.15;
+}
+
+.missing p {
+  margin: 0;
+  max-width: var(--measure);
+}
+
+@media (width <= 431px) {
+  .lockup-horizontal {
+    display: none;
+  }
+
+  .lockup-stacked {
+    display: block;
+  }
+}
+
+@media (forced-colors: active) {
+  .post,
+  .viewer-panel,
+  .post-figure[data-state="error"] .post-fallback {
+    border: 1px solid CanvasText;
+  }
+
+  .retry,
+  .viewer-close,
+  .back-link {
+    border: 1px solid ButtonText;
+  }
+}
+

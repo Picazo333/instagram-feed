@@ -1,0 +1,209 @@
+{
+  "tool": "lighthouse",
+  "lighthouseVersion": "13.6.0",
+  "chrome": "Google Chrome 156.0.8078.47",
+  "url": "http://127.0.0.1:4173/",
+  "note": "Full JSON lives in the evidence folder, not in the repo. INP is not emitted by Lighthouse 13 lab; TBT is the lab proxy.",
+  "runs": [
+    {
+      "file": "mobile-1.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:41:33.660Z",
+      "score": 0.96,
+      "lcp_ms": 2704.8391,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 904.8390999999999,
+      "inp_lab": null,
+      "config_ok": true,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "rttMs": 150,
+      "downloadThroughputKbps": 1638.4,
+      "cpuSlowdownMultiplier": 4,
+      "screen": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      }
+    },
+    {
+      "file": "mobile-2.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:41:43.966Z",
+      "score": 0.96,
+      "lcp_ms": 2704.1934,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 904.1934000000001,
+      "inp_lab": null,
+      "config_ok": true,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "rttMs": 150,
+      "downloadThroughputKbps": 1638.4,
+      "cpuSlowdownMultiplier": 4,
+      "screen": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      }
+    },
+    {
+      "file": "mobile-3.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:41:54.159Z",
+      "score": 0.96,
+      "lcp_ms": 2704.5507,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 904.5507,
+      "inp_lab": null,
+      "config_ok": true,
+      "formFactor": "mobile",
+      "throttlingMethod": "simulate",
+      "rttMs": 150,
+      "downloadThroughputKbps": 1638.4,
+      "cpuSlowdownMultiplier": 4,
+      "screen": {
+        "mobile": true,
+        "width": 390,
+        "height": 844,
+        "deviceScaleFactor": 2
+      }
+    },
+    {
+      "file": "desktop-1.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:42:04.429Z",
+      "score": 1,
+      "lcp_ms": 542.4503,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 242.45030000000003,
+      "inp_lab": null,
+      "config_ok": true,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "rttMs": 40,
+      "downloadThroughputKbps": 10240,
+      "cpuSlowdownMultiplier": 1,
+      "screen": {
+        "mobile": false,
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "file": "desktop-2.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:42:14.580Z",
+      "score": 1,
+      "lcp_ms": 543.3305,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 243.33049999999997,
+      "inp_lab": null,
+      "config_ok": true,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "rttMs": 40,
+      "downloadThroughputKbps": 10240,
+      "cpuSlowdownMultiplier": 1,
+      "screen": {
+        "mobile": false,
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      }
+    },
+    {
+      "file": "desktop-3.json",
+      "lighthouseVersion": "13.6.0",
+      "fetchedAt": "2026-11-06T12:42:24.744Z",
+      "score": 1,
+      "lcp_ms": 543.0497,
+      "cls": 0,
+      "tbt_ms": 0,
+      "fcp_ms": 243.04969999999997,
+      "inp_lab": null,
+      "config_ok": true,
+      "formFactor": "desktop",
+      "throttlingMethod": "simulate",
+      "rttMs": 40,
+      "downloadThroughputKbps": 10240,
+      "cpuSlowdownMultiplier": 1,
+      "screen": {
+        "mobile": false,
+        "width": 1280,
+        "height": 800,
+        "deviceScaleFactor": 1
+      }
+    }
+  ],
+  "surfaces": {
+    "mobile": {
+      "lcp_ms": {
+        "values": [
+          2704.8391,
+          2704.1934,
+          2704.5507
+        ],
+        "median": 2704.5507,
+        "worst": 2704.8391
+      },
+      "cls": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "tbt_ms": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "all_config_ok": true
+    },
+    "desktop": {
+      "lcp_ms": {
+        "values": [
+          542.4503,
+          543.3305,
+          543.0497
+        ],
+        "median": 543.0497,
+        "worst": 543.3305
+      },
+      "cls": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "tbt_ms": {
+        "values": [
+          0,
+          0,
+          0
+        ],
+        "median": 0,
+        "worst": 0
+      },
+      "all_config_ok": true
+    }
+  }
+}
