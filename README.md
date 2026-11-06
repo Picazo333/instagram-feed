@@ -31,7 +31,7 @@ npm run validate
 - `styles.css` — presentación del feed. `index.html` carga antes `assets/signal/tokens.css` y `assets/signal/motion.css`, en ese orden, para que no queden en una cadena de `@import`.
 - `script.js` — mejora opcional: estado de carga o error de cada foto, reintento y visor. Sin JavaScript el feed sigue leyéndose.
 - `404.html`, `server.py` — respuesta 404.
-- `assets/posts/` — fotografías recortadas de las capturas oficiales.
+- `assets/posts/` — fotografías recortadas de las capturas oficiales, guardadas en WebP con el mismo tamaño en píxeles.
 - `assets/brand/` — lockups copiados byte a byte.
 - `assets/signal/` — `tokens.css` y `motion.css` copiados byte a byte.
 - `source/` — enunciado, `learn.json`, `PROVENANCE.json` y `ASSETS.md`.
@@ -52,7 +52,7 @@ La fecha del gif es un gris claro que no llega a 4.5:1. Aquí usa `--color-muted
 
 El título de la página queda alineado al borde izquierdo de la columna, igual que las capturas medidas (el recuadro del `h1` en `strategy.png` tiene el ancho de la columna y la tinta del título empieza en ese borde).
 
-Las fotografías salen de `inst-3.png`, `inst-5.png`, `inst-6.png` y `preview.gif` de ese commit. Se conservan las marcas de agua. Se quitó el puntero del ratón de la grabación, que no forma parte de la maquetación. No hay año en las fechas visibles; `datetime` usa la forma mes-día (`--12-14`, `--12-17`).
+Las fotografías salen de `inst-3.png`, `inst-5.png`, `inst-6.png` y `preview.gif` de ese commit. Se conservan las marcas de agua y el recorte. El archivo servido es WebP para que la primera foto pese menos; el encuadre no cambia. Se quitó el puntero del ratón de la grabación, que no forma parte de la maquetación. No hay año en las fechas visibles; `datetime` usa la forma mes-día (`--12-14`, `--12-17`).
 
 El pie muestra el lockup horizontal a 400 px. Por debajo de 432 px de ancho (cuando 400 px ya no caben con el margen) se muestra el lockup apilado a 280 px. Los SVG no se redibujaron.
 

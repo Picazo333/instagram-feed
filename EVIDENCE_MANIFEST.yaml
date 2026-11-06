@@ -1,0 +1,101 @@
+project: instagram-feed
+repo: https://github.com/Picazo333/instagram-feed
+branch: cursor/instagram-feed-8bf9
+base_commit: d379de5fa5ed23ec0fa04beffb7d17d693fa80b0
+source_repo: breatheco-de/exercise-instagram-feed
+commit_sha: b4d4aa334dc254c6fccfd902bb459c61e51ff467
+status: PENDIENTE_REVISION_ORQUESTADOR
+
+evidence:
+  - id: E-LAYOUT
+    rubric: [R01, R06, R07, R09, R17, R20]
+    files:
+      - /opt/cursor/artifacts/feed-390.png
+      - /opt/cursor/artifacts/feed-390-top.png
+      - /opt/cursor/artifacts/feed-768.png
+      - /opt/cursor/artifacts/feed-768-top.png
+      - /opt/cursor/artifacts/feed-1280.png
+      - /opt/cursor/artifacts/feed-1280-top.png
+      - /opt/cursor/artifacts/feed-320.png
+  - id: E-OVERFLOW
+    rubric: [R17]
+    file: /opt/cursor/artifacts/capture-report.json
+    pointer: overflow
+  - id: E-LOCKUP
+    rubric: [R12]
+    sha256:
+      signal-horizontal.svg: 85459232bf51e7bf7c94225fd4f2cd6b71a681b6d701cb4ffd6d2a142cf57a81
+      signal-stacked.svg: 11314b300284db342bc15a7c7695c23199f65f68178af45586b62d01e9ea133a
+    widths:
+      "320": stacked 280
+      "390": stacked 280
+      "768": horizontal 400
+      "1280": horizontal 400
+  - id: E-PROVENANCE
+    rubric: [R11, R10]
+    sha256:
+      source/OFFICIAL_README.md: 6d3fe4d289ca827af904bde27b9a69d595d4c563ea45a0e850bf9c2d35658137
+      source/OFFICIAL_README.es.md: 966bc8c6b3dfbf9f94d06bdbc678d553122693643ef8b8f735b92be4eb04d0d6
+      source/learn.json: 01c68edf79622ee2f74c8ec49c03235a18b56e3cdff5ab87dc54ee4ceead928a
+  - id: E-VALIDATE
+    rubric: [R03, R04, R06, R09, R14, R24]
+    command: npm run validate
+    result: All validation checks passed
+  - id: E-A11Y
+    rubric: [R15, R16, R26]
+    file: /opt/cursor/artifacts/capture-report.json
+    screenshots:
+      - /opt/cursor/artifacts/focus-skip-1280.png
+      - /opt/cursor/artifacts/reduced-motion-390.png
+  - id: E-STATES
+    rubric: [R18, R19]
+    screenshots:
+      - /opt/cursor/artifacts/loading-state-390.png
+      - /opt/cursor/artifacts/error-state-390.png
+      - /opt/cursor/artifacts/not-found-390.png
+  - id: E-DIALOG
+    rubric: [R21, R23]
+    screenshots:
+      - /opt/cursor/artifacts/dialog-768.png
+    video: /opt/cursor/artifacts/feed-tour.mp4
+    duration_s: 6.72
+    frames: 168
+  - id: E-LIGHTHOUSE
+    rubric: [R22]
+    summary_in_repo: lighthouse-summary.json
+    details: /opt/cursor/artifacts/lighthouse/
+    lcp_element: "article#post-1 > div.post-figure > button.post-photo > img"
+    lcp_url: assets/posts/my-first-photo.webp
+    repair: "WebP de la primera foto (19372 bytes, 596x399), preload y fetchpriority=high, decoding=sync; lazy y fetchpriority=low en el resto de fotos y lockups; HTTP/1.1 keep-alive."
+    mobile:
+      viewport: 390x844
+      throttling: simulate
+      rtt_ms: 150
+      download_kbps: 1638.4
+      cpu: 4
+      lcp_ms_values: [1353.5197, 1277.9212, 1278.8439]
+      lcp_ms_median: 1278.8439
+      lcp_ms_worst: 1353.5197
+      lcp_target_ms: 2500
+      lcp_target_met: true
+      cls_median: 0
+      tbt_ms_median: 0
+    desktop:
+      viewport: 1280x800
+      throttling: simulate
+      rtt_ms: 40
+      download_kbps: 10240
+      cpu: 1
+      lcp_ms_values: [302.498, 302.8988, 302.6695]
+      lcp_ms_median: 302.6695
+      lcp_ms_worst: 302.8988
+      lcp_target_ms: 2500
+      lcp_target_met: true
+      cls_median: 0
+      tbt_ms_median: 0
+    previous_mobile_lcp_ms_median: 2704.5507
+    inp: not_emitted_by_lighthouse_13_lab
+    config_ok: true
+  - id: E-HITL
+    rubric: [R27]
+    status: HITL_ENVIO_MIGUEL

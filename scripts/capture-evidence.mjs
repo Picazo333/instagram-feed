@@ -126,7 +126,7 @@ for (const [width, height] of widths) {
   const page = await newPage(390, 844);
   await page.setRequestInterception(true);
   page.on("request", (request) => {
-    if (request.url().includes("my-first-photo.jpg")) {
+    if (request.url().includes("my-first-photo.webp")) {
       setTimeout(() => request.continue().catch(() => {}), 1200);
       return;
     }

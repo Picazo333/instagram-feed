@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23eaeaea'/%3E%3C/svg%3E">
     <title>Breathe Code Photo Feed</title>
-    <link rel="preload" as="image" href="assets/posts/my-first-photo.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="assets/posts/my-first-photo.webp" type="image/webp" fetchpriority="high">
     <link rel="stylesheet" href="assets/signal/tokens.css">
     <link rel="stylesheet" href="assets/signal/motion.css">
     <link rel="stylesheet" href="styles.css">
@@ -43,10 +43,11 @@
         <div class="post-figure" data-state="idle">
           <button type="button" class="post-photo" aria-haspopup="dialog">
             <img
-              src="assets/posts/my-first-photo.jpg"
+              src="assets/posts/my-first-photo.webp"
               width="596"
               height="399"
               fetchpriority="high"
+              decoding="sync"
               alt="Close-up of a gray and white puppy standing on grass.">
           </button>
           <div class="post-fallback">
@@ -64,9 +65,12 @@
         <div class="post-figure" data-state="idle">
           <button type="button" class="post-photo" aria-haspopup="dialog">
             <img
-              src="assets/posts/some-cute-thing.jpg"
+              src="assets/posts/some-cute-thing.webp"
               width="598"
               height="599"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
               alt="A pug lying on a pink skateboard in front of tall green hedges.">
           </button>
           <div class="post-fallback">
@@ -84,9 +88,12 @@
         <div class="post-figure" data-state="idle">
           <button type="button" class="post-photo" aria-haspopup="dialog">
             <img
-              src="assets/posts/paparazzi.jpg"
+              src="assets/posts/paparazzi.webp"
               width="598"
               height="361"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
               alt="Person seen from behind typing on a laptop with a blank white screen.">
           </button>
           <div class="post-fallback">
@@ -104,9 +111,12 @@
         <div class="post-figure" data-state="idle">
           <button type="button" class="post-photo" aria-haspopup="dialog">
             <img
-              src="assets/posts/food.jpg"
+              src="assets/posts/food.webp"
               width="598"
               height="510"
+              loading="lazy"
+              fetchpriority="low"
+              decoding="async"
               alt="Bowl of noodles with green onion, carrot, and a fork.">
           </button>
           <div class="post-fallback">
@@ -124,22 +134,28 @@
         src="assets/brand/signal-horizontal.svg"
         width="1000"
         height="160"
-        alt="4Geeks por Divinivid">
+        alt="4Geeks por Divinivid"
+        loading="lazy"
+        fetchpriority="low"
+        decoding="async">
       <img
         class="lockup lockup-stacked"
         src="assets/brand/signal-stacked.svg"
         width="600"
         height="300"
-        alt="4Geeks por Divinivid">
+        alt="4Geeks por Divinivid"
+        loading="lazy"
+        fetchpriority="low"
+        decoding="async">
     </footer>
     <dialog class="viewer" id="viewer" aria-labelledby="viewer-title">
       <div class="viewer-panel">
         <h2 class="viewer-title" id="viewer-title">Photo</h2>
-        <img class="viewer-image" id="viewer-image" src="assets/posts/my-first-photo.jpg" width="596" height="399" alt="Close-up of a gray and white puppy standing on grass.">
+        <img class="viewer-image" id="viewer-image" src="assets/posts/my-first-photo.webp" width="596" height="399" alt="Close-up of a gray and white puppy standing on grass.">
         <p class="viewer-caption" id="viewer-caption"></p>
         <button type="button" class="viewer-close" id="viewer-close">Close</button>
       </div>
     </dialog>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </body>
 </html>
