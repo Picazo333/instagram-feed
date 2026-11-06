@@ -3,7 +3,7 @@ repo: https://github.com/Picazo333/instagram-feed
 branch: cursor/instagram-feed-8bf9
 base_commit: d379de5fa5ed23ec0fa04beffb7d17d693fa80b0
 source_repo: breatheco-de/exercise-instagram-feed
-commit_sha: b4d4aa334dc254c6fccfd902bb459c61e51ff467
+commit_sha: ab7ae754b8fe5490af355a27596fcad8e4ab3f62
 status: PENDIENTE_REVISION_ORQUESTADOR
 
 evidence:
